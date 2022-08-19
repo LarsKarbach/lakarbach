@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 72a14fa0-713f-447b-9e18-7d6d0b6de4a5
+      url: 'https://lakarbach.netlify.app'
