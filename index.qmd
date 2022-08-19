@@ -1,5 +1,6 @@
 ---
-title: "Blog"
+title: "Another Name?"
+subtitle: "Another Subtitle"
 listing:
   contents: posts
   sort: "date desc"
