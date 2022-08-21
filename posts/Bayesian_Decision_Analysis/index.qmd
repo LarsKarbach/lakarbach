@@ -2,16 +2,11 @@
 title: "Bayesian Decision Analysis in PyMC"
 description: ""
 date: "8/20/2022"
-draft: True
+draft: False
 execute: 
   eval: false
 ---
 
-
-```{python}
-def main():
-    pass
-```
 
 
 <!-- 
