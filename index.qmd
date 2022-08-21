@@ -1,6 +1,6 @@
 ---
-title: "Another Name?"
-subtitle: "Another Subtitle"
+title: "A Blog about Bayesian Statistics"
+subtitle: ""
 listing:
   contents: posts
   sort: "date desc"
