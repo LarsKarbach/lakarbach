@@ -2,6 +2,7 @@
 title: "Welcome To My Blog"
 date: "2022-08-16"
 categories: [news]
+draft: True
 ---
 
 This is the first post in a Quarto blog. Welcome!

@@ -3,6 +3,7 @@ title: "Post With Code"
 date: "2022-08-19"
 categories: [news, code, analysis]
 image: "image.jpg"
+draft: True
 ---
 
 This is a post with executable code.
