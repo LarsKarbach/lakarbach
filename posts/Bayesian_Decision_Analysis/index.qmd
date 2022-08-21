@@ -1,0 +1,110 @@
+---
+title: "Bayesian Decision Analysis in PyMC"
+description: ""
+date: "8/20/2022"
+draft: True
+execute: 
+  eval: false
+---
+
+
+```{python}
+def main():
+    pass
+```
+
+
+<!-- 
+```{python}
+import arviz as az
+import numpy as np
+import pymc as pm
+```
+
+
+### 1. Space of possible Decisions and outcomes
+
+We start by defining our set of decisions which our individual can make and the outcomes which resulted from every decision.
+In our case we deal with a decision of a transport mode and an associated time and cost. 
+
+```{python}
+modes = ["walk", "bike", "public", "cab"]
+```
+
+
+### 2. Probability distribution of outcomes conditional on decisions
+
+Every decision $d \in D$ yields an outcome $x=(c, t) \in X$. The density we need looks like the following:
+$$
+p(x|d, x^{obs}, d^{obs})= \int p(x|d,\theta) \cdot p(\theta|x^{obs}, d^{obs})d\theta
+$$
+
+The commute time $t_n$ aswell as the cost $c_n$ are modeled as follows:
+
+\begin{align*}
+
+t_n &\sim lognormal(\mu_{d[n]}, \sigma_{d[n]})\\
+\mu_k &\sim normal(0,1) \\
+\sigma_k &\sim lognormal(0, 0.25) \\
+
+c_n &\sim lognormal(\nu_{d[n]}, \tau_{d[n]}) \\
+\nu_k &\sim normal(0,1) \\
+\tau_k &\sim lognormal(0,0.25)
+\end{align*}
+
+
+### 3. Defining our utility function
+
+The utility function $U(X)$ takes an outcome and maps it to a real number which is our resulting utility. Our utility is a linear function of the cost and the time.
+
+
+
+```{python}
+def utility(cost, time):
+    return -(cost+5*time)
+```
+
+
+
+### 4. Compute the expected utility
+
+```{python}
+with pm.Model(coords={"modes": modes}) as discrete_choice_model:
+
+    #Priors for time
+    mu = pm.Normal("mu", 0, 1)
+    sigma = pm.LogNormal("sigma", 0, 0.25)
+
+    time = pm.LogNormal("time", mu, sigma, dims="modes")
+
+    #Priors for cost
+    nu = pm.Normal("nu", 0, 1)
+    tau = pm.LogNormal("tau", 0, 0.25)
+
+    cost = pm.LogNormal("cost", nu, tau, dims="modes")
+
+    #utility 
+    util = pm.Deterministic("utility", utility(cost, time), dims="modes")
+```
+
+
+
+
+```{python}
+with discrete_choice_model:
+    idata = pm.sample(1000, tune=2500, random_seed=RANDOM_SEED, target_accept=0.95)
+```
+
+
+
+
+```{python}
+with discrete_choice_model:
+    pp = pm.sample_posterior_predictive(idata, random_seed=RANDOM_SEED)
+```
+
+
+
+```{python}
+az.summary(idata, filter_vars="like", var_names="utility")["mean"].idxmax()
+``` -->
