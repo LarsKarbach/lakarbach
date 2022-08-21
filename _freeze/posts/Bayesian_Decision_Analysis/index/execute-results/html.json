@@ -1,0 +1,14 @@
+{
+  "hash": "705aa00cd6f25e872b9f8c5be9524032",
+  "result": {
+    "markdown": "---\ntitle: \"A Bayesian Decision Analysis in PyMC\"\ndescription: \"\"\ndate: \"8/20/2022\"\ndraft: True\n---\n\n::: {.cell}\n\n```{.python .cell-code}\ndef main(int):\n    return int * 5\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nx = 10\n```\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
