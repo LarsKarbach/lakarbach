@@ -1,6 +1,6 @@
 ---
 title: "Lars Karbach"
-image: profile2.jpg
+image: profile_low.jpg
 about:
   template: jolla
   links:
