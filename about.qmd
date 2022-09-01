@@ -1,6 +1,6 @@
 ---
 title: "Lars Karbach"
-image: profile.jpg
+image: profile_low.jpg
 about:
   template: jolla
   links:
@@ -13,7 +13,6 @@ about:
     - icon: github
       text: Github
       href: https://github.com/LarsKarbach
-
 ---
 
 Hey there! My name is Lars Karbach i'm an enrolled Master Student in Germany. My main research interests include Bayesian Inference and Computation aswell as Machine Learning. The domains in which I prefer to use these methods are Transportation Modelling, Spatial Statistics and Finance. Feel free to get in touch with me on my Socials.
