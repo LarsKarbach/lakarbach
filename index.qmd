@@ -1,6 +1,6 @@
 ---
-title: "A Blog about Bayesian Statistics"
-subtitle: ""
+title: "What are the odds?"
+subtitle: "A Blog about Bayesian Statistics, Machine Learning and all the other stuff"
 listing:
   contents: posts
   sort: "date desc"
