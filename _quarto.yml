@@ -12,6 +12,6 @@ website:
         href: https://twitter.com/lakarbach
 format:
   html:
-    theme: theme.scss
+    # theme: theme.scss
     css: styles.css
 
