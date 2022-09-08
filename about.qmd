@@ -2,7 +2,9 @@
 title: "Lars Karbach"
 image: profile_low.jpg
 about:
-  template: jolla
+  template: trestles
+  # image-width: 30em
+  # image-shape: round
   links:
     - icon: twitter
       text: Twitter
